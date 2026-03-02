@@ -3,7 +3,7 @@ export const metadata = {
 };
 
 function HomePage() {
-  return <div>Eps Website</div>;
+  return <div className="text-red-500">Eps Website</div>;
 }
 
 export default HomePage;
