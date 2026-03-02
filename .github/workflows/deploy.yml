@@ -24,3 +24,5 @@ jobs:
             git pull origin main
             docker-compose build
             docker-compose up -d
+          timeout: 600
+          command_timeout: 600
