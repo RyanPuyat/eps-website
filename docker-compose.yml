@@ -1,9 +1,8 @@
 version: '3.8'
 
 services:
-  eps-website:
-    build: .
-    container_name: eps-website
+  web:
+    image: ryanpuyat/eps-website:latest
     ports:
       - '4000:3000'
     restart: always
