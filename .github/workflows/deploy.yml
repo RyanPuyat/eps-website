@@ -40,5 +40,5 @@ jobs:
             git pull origin main
              docker-compose down
             docker-compose pull
-            ddocker-compose up -d --force-recreate
+            docker-compose up -d --force-recreate
           command_timeout: 600s
