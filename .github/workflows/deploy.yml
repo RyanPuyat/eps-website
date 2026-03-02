@@ -39,5 +39,5 @@ jobs:
             cd ~/eps-website
             git pull origin main
             docker-compose pull
-            docker-compose up -d
+            docker-compose up -d --force-recreate
           command_timeout: 600s
