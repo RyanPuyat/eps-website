@@ -39,6 +39,11 @@
   @apply font-bold text-xl lg:text-2xl;
 }
 
+.app-name {
+  color: #0383b2;
+  @apply font-bold text-3xl lg:text-4xl tracking-wide;
+}
+
 :root {
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
