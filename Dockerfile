@@ -32,7 +32,8 @@ COPY package*.json ./
 
 #Copy Prisma
 
-COPY lib/generated/prisma ./lib/generated/prisma
+COPY prisma ./prisma
+
 
 
 # Install dependencies
