@@ -30,6 +30,11 @@ WORKDIR /app
 # Copy only dependency files first (better caching)
 COPY package*.json ./
 
+#Copy Prisma
+
+COPY lib/generated/prisma ./lib/generated/prisma
+
+
 # Install dependencies
 RUN npm install
 
