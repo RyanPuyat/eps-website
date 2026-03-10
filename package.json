@@ -7,10 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
-    "postinstall": "prisma generate --schema=lib/generated/prisma/schema.prisma"
-  },
-  "prisma": {
-    "schema": "lib/generated/prisma/schema.prisma"
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
