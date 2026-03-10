@@ -1,0 +1,19 @@
+generator client {
+  provider = "prisma-client"
+  output   = "../lib/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+}
+
+model News {
+  id          String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title       String   @unique
+  description String?
+  imageUrl    String?
+  source      String?
+  author      String?
+  publishedAt DateTime @default(now())
+  url         String
+}

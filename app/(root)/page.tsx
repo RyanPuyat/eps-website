@@ -1,4 +1,4 @@
-import { Button } from '@/components/ui/button';
+import Hero from '@/components/shared/hero/hero';
 
 // const delay = (ms) => new Promise((resolve) => setInterval(resolve, ms));
 
@@ -8,10 +8,10 @@ export const metadata = {
 
 function HomePage() {
   // await delay(2000);
+  // console.log(sampleData);
   return (
     <>
-      <div className="text-blue-600">Eps Website</div>
-      <Button>Green Button</Button>
+      <Hero />
     </>
   );
 }
