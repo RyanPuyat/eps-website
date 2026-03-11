@@ -1,4 +1,5 @@
 import Hero from '@/components/shared/hero/hero';
+import QuizCard from '@/components/shared/quiz/quiz-card';
 
 // const delay = (ms) => new Promise((resolve) => setInterval(resolve, ms));
 
@@ -12,6 +13,7 @@ function HomePage() {
   return (
     <>
       <Hero />
+      <QuizCard />
     </>
   );
 }
