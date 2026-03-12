@@ -85,6 +85,85 @@
   }
 }
 
+@layer components {
+  .card-wrapper {
+    @apply relative overflow-hidden rounded-xl p-[2px] block w-full h-full;
+    isolation: isolate;
+  }
+
+  .card-wrapper::before {
+    content: '';
+    position: absolute;
+    inset: -200%; /* Large enough to never see the edges while rotating */
+    z-index: -1;
+
+    /* 1. Define the background using a variable for the angle */
+    background: conic-gradient(
+      from var(--start-angle, 0deg),
+      var(--glow-color) 0deg,
+      #ffffff 80deg,
+      transparent 200deg,
+      var(--glow-color) 360deg
+    );
+    transform-origin: center;
+    /* 2. Attach the animation here so it's inherited by all variants */
+    animation: rotate-logic 10s linear infinite;
+  }
+
+  /* Variant 1: Purple, starts at 0 degrees */
+  .variant-rotate {
+    --start-angle: 0deg;
+    --glow-color: var(--card-glow);
+  }
+
+  /* Variant 2: Blue, starts at 180 degrees */
+  .variant-rotate-alt {
+    --start-angle: 180deg;
+    --glow-color: var(--card-glow-alt);
+  }
+
+  @keyframes rotate-logic {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+}
+/* @layer components {
+  .card-wrapper {
+    @apply relative overflow-hidden rounded-xl p-[1px]; 
+
+  .card-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%; 
+    transform: translate(-50%, -50%);
+    background: conic-gradient(
+      #0062e6 0deg,
+      #0062e6 60deg,
+      #728bf7 120deg,
+      rgba(85, 90, 134, 0.3) 180deg,
+      transparent 270deg,
+      #0062e6 360deg
+    );
+    animation: rotate 6s linear infinite;
+    z-index: 0;
+  }
+
+  @keyframes rotate {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+} */
+
 :root {
   --background: oklch(0.969 0.009 128.6);
   --card: oklch(0.948 0.009 128.6);
@@ -121,6 +200,8 @@
   --border: oklch(0.88 0.01 130);
   --input: oklch(0.88 0.01 130);
   --ring: oklch(0.4 0.12 260);
+  --card-glow: #a855f7; /* Purple */
+  --card-glow-alt: #3b82f6; /* Blue */
 }
 
 .dark {
@@ -159,6 +240,9 @@
   --border: oklch(0.28 0.01 260);
   --input: oklch(0.28 0.01 260);
   --ring: oklch(0.6 0.12 260);
+
+  --card-glow: #d8b4fe; /* Lighter Purple for contrast */
+  --card-glow-alt: #60a5fa; /* Lighter Blue for contrast */
 }
 /*
 @theme inline {
