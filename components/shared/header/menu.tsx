@@ -18,7 +18,7 @@ function Menu() {
     <div className="flex justify-end gap-3">
       <nav className="hidden md:flex w-full max-w-xs gap-1">
         <ModeToggle />
-        <Button asChild>
+        <Button asChild className="hover:scale-105">
           <Link href="/sign-in">
             <User2Icon /> Sign In
           </Link>

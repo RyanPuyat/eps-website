@@ -8,11 +8,10 @@ function Header() {
         <div className="flex-start">
           {/* <Logo /> */}
           <Link href="/">
-            <p className="rounded-lg border-2 border-b-4 border-r-4 border-black px-2 py-1 text-xl h2-bold text-primary transition-all hover:translate-y-0.5 md:block dark:border-white mr-2">
-              E
+            <p className="rounded-lg border border-b-4 border-r-4 border-primary px-2 py-1 text-xl h2-bold text-primary transition-all hover:scale-105 md:block dark:border-primary mr-2">
+              EPS Corner
             </p>
           </Link>
-          <h2 className="h2-bold text-primary">PS CORNER</h2>
         </div>
 
         <Menu />
