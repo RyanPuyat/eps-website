@@ -14,7 +14,14 @@ function Hero() {
             </p>
           </div>
           <div className="mt-8">
-            <video className="mx-auto" width="600" autoPlay loop muted>
+            <video
+              className="mx-auto"
+              width="600"
+              autoPlay
+              loop
+              muted
+              playsInline
+            >
               <source src="/videos/cube.webm" type="video/webm" />
               {/* Fallback for browsers that don’t support .webm */}
               {/* <source src="/videos/my-hero-video.mp4" type="video/mp4" /> */}
